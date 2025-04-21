@@ -113,3 +113,8 @@ Feel free to fork this repo, personalize it, and raise a pull request.
 
 ---
 
+<img width="1430" alt="Screenshot 2025-04-21 at 20 34 51" src="https://github.com/user-attachments/assets/17d3de35-320b-465c-905a-63b88b3b1093" />
+<img width="1433" alt="Screenshot 2025-04-21 at 20 34 42" src="https://github.com/user-attachments/assets/e69cc5a7-77d4-466f-a538-5ef3dc31efeb" />
+<img width="1436" alt="Screenshot 2025-04-21 at 20 34 28" src="https://github.com/user-attachments/assets/807ccf10-ef01-4549-806b-9064ce3b2965" />
+<img width="1436" alt="Screenshot 2025-04-21 at 20 33 46" src="https://github.com/user-attachments/assets/57aede8a-f227-4a0a-ba5c-467ae1b63730" />
+<img width="472" alt="Screenshot 2025-04-21 at 15 34 02" src="https://github.com/user-attachments/assets/c1740cd7-4c8b-44b5-a76c-b95f9ade3b88" />
