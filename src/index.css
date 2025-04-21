@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cursor-color: theme('colors.pink.400');
+  --cursor-glow: rgba(251, 113, 133, 0.8);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  cursor: none !important;
+}
+
+/* Dark mode */
+.dark {
+  color-scheme: dark;
+}
+
+/* Animation classes */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes blob {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.1);
+  }
+  66% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.5s ease-out forwards;
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+.animation-delay-900 {
+  animation-delay: 900ms;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Custom cursor styles */
+.custom-cursor-outer {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 0.5),
+    rgba(255, 166, 0, 0.5),
+    rgba(255, 255, 0, 0.5),
+    rgba(0, 255, 0, 0.5),
+    rgba(0, 255, 255, 0.5),
+    rgba(0, 0, 255, 0.5),
+    rgba(238, 130, 238, 0.5)
+  );
+  background-size: 200% 200%;
+  animation: rainbow 6s linear infinite;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+  filter: blur(4px);
+  transition: width 0.3s ease-out, height 0.3s ease-out, transform 0.3s ease-out;
+  will-change: transform, width, height, background-position;
+}
+
+.custom-cursor-inner {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ffa600,
+    #ffff00,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #ee82ee
+  );
+  background-size: 200% 200%;
+  animation: rainbow 6s linear infinite;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 30px rgba(255, 255, 255, 0.4),
+    0 0 40px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-out;
+  will-change: transform, background-position;
+}
+
+/* Hide default cursors */
+* {
+  cursor: none !important;
+}
+
+/* Interactive element hover effects */
+a:hover ~ .custom-cursor-outer,
+button:hover ~ .custom-cursor-outer,
+input:hover ~ .custom-cursor-outer,
+textarea:hover ~ .custom-cursor-outer,
+[role="button"]:hover ~ .custom-cursor-outer {
+  width: 60px;
+  height: 60px;
+  filter: blur(8px);
+}
+
+a:hover ~ .custom-cursor-inner,
+button:hover ~ .custom-cursor-inner,
+input:hover ~ .custom-cursor-inner,
+textarea:hover ~ .custom-cursor-inner,
+[role="button"]:hover ~ .custom-cursor-inner {
+  transform: translate(-50%, -50%) scale(1.5);
+  box-shadow: 
+    0 0 15px rgba(255, 255, 255, 0.8),
+    0 0 30px rgba(255, 255, 255, 0.6),
+    0 0 45px rgba(255, 255, 255, 0.4),
+    0 0 60px rgba(255, 255, 255, 0.2);
+}
